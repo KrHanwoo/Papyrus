@@ -11,7 +11,7 @@ body {
 }
 
 * {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 24px;
   font-family: Pretendard, Arial, sans-serif;
   font-weight: 400;
@@ -50,7 +50,7 @@ select {
   box-sizing: border-box;
   background-color: #1a1a1a;
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   width: 100%;
   border-radius: 0px;
   text-align: left;
@@ -222,4 +222,24 @@ label {
 
 .dropdown > .list > .selected{
   font-weight: 700;
+}
+
+.create{
+  width: 80px;
+  color: white;
+  background-color: #008542;
+  outline: none;
+  border: 1px solid transparent;
+}
+
+.create:hover{
+  background-color: #0dd166;
+}
+
+.create:active{
+  background-color: #006431;
+}
+
+.create:focus{
+  border: 1px solid white;
 }
