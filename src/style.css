@@ -1,0 +1,225 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css");
+
+:root {
+  color: #f6f6f6;
+  background-color: #333333;
+}
+
+html,
+body {
+  margin: 0px;
+}
+
+* {
+  font-size: 18px;
+  line-height: 24px;
+  font-family: Pretendard, Arial, sans-serif;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  user-select: none;
+}
+
+::placeholder {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 30px;
+  text-align: center;
+  margin: 40px 0px;
+}
+
+.container {
+  margin: 0px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+ 
+input,
+select {
+  border: solid 2px #0dd166;
+  outline: none;
+  padding: 3px 10px;
+  box-sizing: border-box;
+  background-color: #1a1a1a;
+  color: white;
+  font-size: 18px;
+  width: 100%;
+  border-radius: 0px;
+  text-align: left;
+}
+
+input:focus,
+select:focus{
+  box-shadow: 0px 0px 1px 1px white;
+  border: solid 2px whitesmoke;
+  z-index: 1;
+}
+
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 1em;
+}
+
+option {
+  border: solid 2px #0dd166;
+  border-radius: 0px;
+}
+
+.main-inputs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.main-inputs>div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.dir-div {
+  display: flex;
+  width: 100%;
+}
+
+#browse-btn {
+  margin-left: -2px;
+  width: fit-content;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#server-location-span {
+  font-size: 16px;
+  color: #c0c0c0;
+  text-align: left;
+  margin: 2px 0px;
+}
+
+.open {
+  opacity: 1;
+  overflow: auto;
+  max-height: 15rem;
+}
+
+.end{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.info{
+  color: #c0c0c0;
+  margin-right: 3px;
+  position: relative;
+}
+
+.info > .tooltip{
+  display: none;
+  background-color: #202020;
+  border-radius: 4px;
+  padding: 0px 5px;
+  text-wrap: nowrap;
+  font-size: 14px;
+}
+
+.info:hover > .tooltip{
+  position: absolute;
+  display: block;
+  right: 0px;
+  top: -100%;
+}
+
+
+.dropdown{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.dropdown > input{
+  margin-right: -10px;
+}
+
+.dropdown > .list{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  background-color: #131313;
+  overflow-y: scroll;
+  clip: rect(auto, auto, 0, auto);
+  height: 200px;
+  opacity: 0;
+  scale: 0;
+  transition: clip 0.2s cubic-bezier(0, 1, 0, 1), opacity 0.2s cubic-bezier(0, 0, 0, 1);
+}
+
+.dropdown:focus-within > .list{
+  position: absolute;
+  scale: 1;
+  top: calc(100% + 5px);
+  width: 100%;
+  opacity: 1;
+  clip: rect(auto, auto, 200px, auto);
+}
+
+.dropdown > .list::-webkit-scrollbar{
+  width: 6px;
+}
+
+.dropdown > .list::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+.dropdown > .list::-webkit-scrollbar-thumb{
+  background: #424242;
+  border-radius: 2px;
+}
+
+.dropdown > .list::-webkit-scrollbar-thumb:hover{
+  background: #4e4e4e;
+}
+
+.dropdown > .list > span{
+  width: calc(100% - 30px);
+  text-align: left;
+  padding: 5px 15px;
+}
+
+.dropdown > .list > span.current{
+  background-color: #008542
+}
+
+
+.dropdown > .dropdown-arrow{
+  transform: translateX(-100%);
+  z-index: 10;
+  transition: transform 0.1s ease-out;
+}
+
+.dropdown:has(> input:hover) > .dropdown-arrow{
+  transform: translate(-100%, 25%);
+}
+
+.dropdown > .list > .selected{
+  font-weight: 700;
+}

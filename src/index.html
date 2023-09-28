@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papyrus</title>
+  <script type="module" src="main.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Papyrus</h1>
+
+    <div class="main-inputs">
+      <div>
+        <label for="name-input">NAME</label>
+        <input id="name-input" placeholder="Unnamed Server" spellcheck="false">
+      </div>
+      <div>
+        <div class="end">
+          <label for="dir-input">DIRECTORY</label>
+          <span class="info">?
+            <span class="tooltip">A new directory will be created under here</span>
+          </span>
+        </div>
+        <div class="dir-div">
+          <input id="dir-input" placeholder="&lt;Use default directory&gt;" spellcheck="false">
+          <input type="button" value="BROWSE" id="browse-btn">
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="main-inputs">
+      <div>
+        <label for="version-input">VERSION</label>
+        <div class="dropdown">
+          <input id="version-input" type="text" value="1.10" spellcheck="false">
+          <svg class="dropdown-arrow" width="10" height="10" viewBox="0 0 10 5">
+            <path fill="#fff" d="M9.67.04 5 4.708.33.039" style="fill:none;stroke:#fff" />
+          </svg>
+          <div class="list">
+            <span>1.8</span>
+            <span>1.9</span>
+            <span class="selected">1.10</span>
+            <span>1.11</span>
+            <span>1.12</span>
+            <span>1.13</span>
+            <span>1.14</span>
+            <span>1.15</span>
+            <span>1.16</span>
+            <span>2.17</span>
+            <span>2.18</span>
+            <span>2.19</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
