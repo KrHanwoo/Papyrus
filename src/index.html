@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Papyrus</title>
   <script src="util.js"></script>
+  <script src="ui.js" defer></script>
   <script src="dropdown.js" defer></script>
   <script type="module" src="main.js" defer></script>
 </head>
@@ -28,7 +29,7 @@
           </span>
         </div>
         <div class="dir-div">
-          <input id="dir-input" placeholder="&lt;Use default directory&gt;" spellcheck="false">
+          <input id="dir-input" placeholder="&lt;Use Default Directory&gt;" spellcheck="false">
           <input type="button" value="BROWSE" id="browse-btn">
         </div>
       </div>
@@ -43,6 +44,22 @@
             <path fill="#fff" d="M9.67.04 5 4.708.33.039" style="fill:none;stroke:#fff" />
           </svg>
           <div class="list">
+          </div>
+        </div>
+      </div>
+      <div>
+        <label for="java-input">JAVA</label>
+        <div class="dropdown">
+          <input id="java-input" type="text" spellcheck="false">
+          <svg class="dropdown-arrow" width="10" height="10" viewBox="0 0 10 5">
+            <path fill="#fff" d="M9.67.04 5 4.708.33.039" style="fill:none;stroke:#fff" />
+          </svg>
+          <div class="list">
+            <span>Default</span>
+            <span>8</span>
+            <span>11</span>
+            <span>16</span>
+            <span>17</span>
           </div>
         </div>
       </div>
